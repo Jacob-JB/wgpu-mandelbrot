@@ -67,7 +67,7 @@ fn main() {
 
     let (device, queue) = pollster::block_on(adapter.request_device(&DeviceDescriptor {
         label: None,
-        features: Features::BUFFER_BINDING_ARRAY,
+        features: Features::empty(),
         limits: Limits::downlevel_defaults(),
     }, None)).unwrap();
 
