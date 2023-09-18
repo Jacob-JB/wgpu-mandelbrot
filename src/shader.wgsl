@@ -58,8 +58,15 @@ fn fragment_main(
         r = next_r;
         i = next_i;
 
+        var hue = f32(n % 20u) / 20.;
+
         if (r*r + i*i >= 4.) {
-            return vec4<f32>(f32(n % 20u) / 20., 1., 1., 1.);
+            return vec4<f32>(
+                min(max(abs(6.*hue - 3.) - 1., 0.), 1.),
+                min(max(2. - abs(6.*hue - 2.), 0.), 1.),
+                min(max(2. - abs(6.*hue - 4.), 0.), 1.),
+                1.,
+            );
         }
     }
 
