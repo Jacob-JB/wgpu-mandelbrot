@@ -1,4 +1,4 @@
-# A mandelbrot renderer for the purposes of my learning
+# A very bad mandelbrot renderer for the purposes of my learning
 
 first project with wgpu, controls are as follows:
 - WASD are movement
