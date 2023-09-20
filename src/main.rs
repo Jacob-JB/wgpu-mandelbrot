@@ -46,7 +46,7 @@ fn main() {
     env_logger::init();
 
     let event_loop = winit::event_loop::EventLoop::new();
-    let mut window = winit::window::WindowBuilder::new().build(&event_loop).unwrap();
+    let window = winit::window::WindowBuilder::new().build(&event_loop).unwrap();
 
 
     let wgpu_instance = Instance::new(InstanceDescriptor {
